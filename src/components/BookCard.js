@@ -1,14 +1,25 @@
 import React from "react";
-export default function BookCard({ char }) {
+import { Card, Grid } from "semantic-ui-react";
+import styled from "styled-components";
+
+const CardDiv = styled.div`
+
+`;
+
+export default function BookCard(props) {
   return (
-    <Card>
-      <Image src={char.image} wrapped ui={false} />
-      <Card.Content>
-        <Card.Header>{char.name}</Card.Header>
-        <Card.Meta>{char.description}</Card.Meta>
-        <Card.Description>{char.isbm.number}</Card.Description>
-      </Card.Content>
-      <Card.Content extra></Card.Content>
-    </Card>
+    <CardDiv>
+      <Grid.Column padded="horizontally" key={props.id}>
+        <Card>
+          <Card.Content>
+            <Card.Header>{props.title}</Card.Header>
+            <Card.Meta>by {props.author}</Card.Meta>
+            <Card.Description>
+              Description: {props.description}
+            </Card.Description>
+          </Card.Content>
+        </Card>
+      </Grid.Column>
+    </CardDiv>
   );
 }

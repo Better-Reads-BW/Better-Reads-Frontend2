@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
+import BookList from "./BookList";
 
 const Nav = props => <NavLink exact {...props} activeClassName="active" />;
 
@@ -20,10 +21,26 @@ const panes = [
     menuItem: <Menu.Item key="home" as={Nav} to={`/`} content={welcomeLabel} />
   },
   {
-    menuItem: <Menu.Item key="signup" as={Nav} to={"/"} content={signupLabel} />
+    menuItem: (
+      <Menu.Item
+        key="signup"
+        as={Nav}
+        to={"/"}
+        content={signupLabel}
+        active={BookList}
+    />
+    )
   },
   {
-    menuItem: <Menu.Item key="signin" as={Nav} to={"/"} content={signinLabel} />
+    menuItem: (
+      <Menu.Item
+        key="signin"
+        as={Nav}
+        to={"/"}
+        content={signinLabel}
+        active={BookList}
+      />
+    )
   }
 ];
 const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />;
