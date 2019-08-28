@@ -5,8 +5,8 @@ export default function BookCard({ char }) {
       <Image src={char.image} wrapped ui={false} />
       <Card.Content>
         <Card.Header>{char.name}</Card.Header>
-        <Card.Meta>{char.species}</Card.Meta>
-        <Card.Description>{char.location.name}</Card.Description>
+        <Card.Meta>{char.description}</Card.Meta>
+        <Card.Description>{char.isbm.number}</Card.Description>
       </Card.Content>
       <Card.Content extra></Card.Content>
     </Card>
