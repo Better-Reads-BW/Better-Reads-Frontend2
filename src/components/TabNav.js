@@ -25,10 +25,10 @@ const panes = [
       <Menu.Item
         key="signup"
         as={Nav}
-        to={"/"}
+        to={"/register"}
         content={signupLabel}
         active={BookList}
-    />
+      />
     )
   },
   {
@@ -36,7 +36,7 @@ const panes = [
       <Menu.Item
         key="signin"
         as={Nav}
-        to={"/"}
+        to={"/login"}
         content={signinLabel}
         active={BookList}
       />

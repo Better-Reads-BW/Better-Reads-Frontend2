@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BookCard from "./BookCard";
 import { Grid, Container as SemanticContainer } from "semantic-ui-react";
-import styled from "styled-components";
 
 export default function BookList() {
   const [books, setBooks] = useState([]);

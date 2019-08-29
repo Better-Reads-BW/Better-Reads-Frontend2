@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
-    const baseURL = "http://localhost:5000";
+    const baseURL = "https://ilovelambda.herokuapp.com/api";
     axios
       .post(`${baseURL}/auth/login`, { username: email, password })
       .then(res => {
         console.log(res);
         localStorage.setItem("token", res.data.token);
+        props.history.push("/booklist");
       })
       .catch(err => {
         console.log(err);
