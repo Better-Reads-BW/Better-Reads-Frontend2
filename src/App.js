@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Route exact path="/WelcomePage" />
         <Route exact path="/TabNav" />
         <Route exact path="/login" render={props => <Login {...props} />} />
         <Route
