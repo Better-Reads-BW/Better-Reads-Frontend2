@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Welcome to the Booklist!!</h1>
         <Route exact path="/WelcomePage" />
         <Route exact path="/TabNav" />
         <Route exact path="/login" render={props => <Login {...props} />} />
